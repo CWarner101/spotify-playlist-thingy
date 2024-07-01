@@ -13,8 +13,8 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id = env.str("YOUR_APP_CLI
                                                scope="user-library-read"))
 
 
-taylor_uri = 'spotify:artist:06HL4z0CvFAxyc27GXpf02'
-results = sp.artist_albums(taylor_uri, album_type='album')
+soad_uri = 'spotify:artist:5eAWCfyUhZtHHtBdNk56l1'
+results = sp.artist_albums(soad_uri, album_type='album')
 albums = results['items']
 while results['next']:
     results = sp.next(results)
